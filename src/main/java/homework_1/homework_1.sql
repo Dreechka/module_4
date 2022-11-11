@@ -27,7 +27,7 @@ INSERT INTO employee (full_name, salary, department_id) VALUES ('Улюкаев 
 INSERT INTO employee (full_name, salary, department_id) VALUES ('Заморский Виктор', 70000, 2);
 
 --5. Вывести на экран всех сотрудников Правления - вывод: все поля employee
-SELECT* FROM employee
+SELECT * FROM employee
 WHERE department_id = 4;
 
 --6. Вывести на экран сумму всех зарплат сотрудников - вывод: общая сумма всех зарплат
@@ -39,7 +39,7 @@ SELECT e.full_name, d.isProfit
 FROM employee AS e INNER JOIN department AS d ON e.department_id = d.id;
 
 --8. Вывести на экран только тех сотрудников, которые получают от 10_000 до 100_000 (включительно) - вывод: все поля employee
-SELECT* FROM employee
+SELECT * FROM employee
 WHERE salary > 10000 AND salary <= 100000;
 
 --9. Удалить Мирского Петра из таблицы 
@@ -51,7 +51,7 @@ UPDATE department SET name = 'Депозитный отдел', isProfit = false
 WHERE name = 'Кредитный отдел';
 
 --11. Вывести всех сотрудников содержащих "иван" (в независимости от регистра) - вывод: все поля employee
-SELECT* FROM employee
+SELECT * FROM employee
 WHERE full_name ILIKE '%иван';
 
 --12. Вывести среднюю зарплату по отделам - вывод: отдел, средняя зарплата
